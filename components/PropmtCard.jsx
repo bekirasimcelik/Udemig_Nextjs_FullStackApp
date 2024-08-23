@@ -1,7 +1,7 @@
 import React from "react";
 
 const PropmtCard = () => {
-  return <div>PropmtCard</div>;
+  return <div>PropmtCart</div>;
 };
 
 export default PropmtCard;
