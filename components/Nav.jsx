@@ -78,6 +78,17 @@ const Nav = () => {
               alt="profile"
               onClick={() => setToggleDropDown((prev) => !prev)}
             />
+            {toggleDropDown && (
+              <div className="dropdown">
+                <Link
+                  href="/profile"
+                  className="dropdown"
+                  onClick={() => setToggleDropDown(false)}
+                >
+                  My Profile
+                </Link>
+              </div>
+            )}
           </div>
         ) : (
           <>
