@@ -22,6 +22,13 @@ const handler = NextAuth({
       });
 
       // if not, create a new user
+      if (!userExist) {
+        await User.create({
+          email: profile.email,
+          username: profile.name.replace(" ", "").toLowerCase(),
+          image: profile.picture,
+        });
+      }
 
       return true;
     } catch (error) {
